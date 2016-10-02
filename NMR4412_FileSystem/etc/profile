@@ -1,0 +1,14 @@
+# Ash profile
+# vim: syntax=sh
+
+# No core files by default
+ulimit -S -c 0 > /dev/null 2>&1
+
+USER="zhaochao"
+LOGNAME=zhaochao
+PS1='[zhaochao@]#'
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/arm-linux-gcc-3.4.5/bin:/opt/arm-2009q3/bin
+
+HOSTNAME=ubuntu
+
+export USER LOGNAME PS1 PATH

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+echo -n Try to bring eth0 interface up....>/dev/ttySAC2
+
+if [ -f /etc/eth0-setting ]; then
+	source /etc/eth0-setting
+
+	if gerp -q "^/dev/root / nfs " /etc/mtab ; then
+		echo -n NFS root ... > /dec/ttySAC2
+	else
+		ifconfig eth0 down
+		ifconfig eht0 hw ether 
+		ifconfig eth0  netmask  up
+		route add default gw 
+	fi
+
+	echo nameserver  > /etc/resolv.conf
+
+else
+
+	if gerp -q "^/dev/root / nfs " /etc/mtab ; then
+		echo -n NFS root ... > /dev/ttySAC2
+	else
+		/sbin/ifconfig etho 192.168.253.12 netmask 255.255.255.0 up
+	fi
+fi
+
+echo Done > /dev/ttySAC2

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+base=inetd
+
+# See how we were called.
+case "" in
+	start)
+			/usr/shib/
+			;;
+	stop)
+			pid=
+			if [ -n "" ]; then
+				kill -9 
+			fi
+			;;
+	esac
+
+
+	exit 0
